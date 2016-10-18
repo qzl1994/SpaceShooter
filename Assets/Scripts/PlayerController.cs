@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+[System.Serializable]
+public class Boundary
+{
+    public float xMax;
+    public float xMin;
+    public float zMax;
+    public float zMin;
+}
 
-    [System.Serializable]
-    public class Boundary
-    {
-        public float xMax;
-        public float xMin;
-        public float zMax;
-        public float zMin;
-    }
+public class PlayerController : MonoBehaviour {
 
     public float Speed;
     public Boundary boundray;
