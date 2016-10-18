@@ -13,6 +13,20 @@ public class PlayerController : MonoBehaviour {
 
     public float Speed;
     public Boundary boundray;
+    public GameObject Shot;         //子弹预设体
+    public Transform ShotSpawn;    //子弹出生位置
+    public float fireRate;          //子弹发射率
+
+    private float nextFire;
+
+    void Update()
+    {
+        if(Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(Shot, ShotSpawn.position, ShotSpawn.rotation);
+        }
+    }
 
     void FixedUpdate()
     {
