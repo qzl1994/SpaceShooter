@@ -1,17 +1,10 @@
 ﻿using UnityEngine;
 
-public class DestoryByContact : MonoBehaviour {
+public class DestoryByContact : MonoBehaviour
+{
 
     public GameObject explosion;
     public GameObject playerExplosion;
-
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
 
     void OnTriggerEnter(Collider other)
     {
