@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class DestoryByContact : MonoBehaviour {
 
@@ -16,7 +15,7 @@ public class DestoryByContact : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Boundary")
+        if(other.tag == "Boundary" || other.tag == "Enemy")
         {
             return;
         }
