@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
@@ -9,6 +10,10 @@ public class GameController : MonoBehaviour {
     public float StartWait;
     public float SpawnWait;
     public float WaveWait;
+
+    public Text Score_text;
+    public Text Restart_text;
+    public Text GameOver_text;
 
 	void Start ()
     {
@@ -33,6 +38,6 @@ public class GameController : MonoBehaviour {
 
             yield return new WaitForSeconds(WaveWait);
         }
-
     }
+
 }
